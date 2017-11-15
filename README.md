@@ -1,23 +1,30 @@
-bamazonCustomer.js is a node application that uses mysql to take in a database to create a simple marketplace where a user can select an item, select how many to purchase and display an amount owed. It will also update the database to reflect the adjustments to the inventory as the user selects items and amounts. Note: after a transaction, the inventory menu re-loads after six seconds.
+# BamazonManager
 
-Instructions:
+Overview
 
-1. Navigate to the Bamazon directory using the terminal window.
-	
-2. Run the js file through node.js by typing "node bamazonCustomer.js" and pressing enter.
+This application creates an Amazon-like storefront with the MySQL gathered so far. The app takes in orders from customers and deplete stock from the store's inventory. 
 
-3. Note that the terminal displays the available items in a list along with each items catagory, unit price and availible stock.
+The screen shot shows the output since it is a CLI application the solution presented here is based on the intermediate level.
 
-4. Select an item by typing in its unit id number and pressing enter.
+In here, a node application called bamazonManager.js is created which runs the application.
+The schema contains properties as Product_name, Department_name, Price, and Stock_quantity
+When the program is implemented, a set of menu options is displayed.
 
-5. Enter how many of the item you would like to purchase and press enter.
+The user can: 
+1. View Products for Sale
+2. View Low Inventory
+3. Add to Inventory
+4. Add New Product
 
-7. The program will add up the total cost and display the amount owed. 
 
-8. You will have six seconds to review the order and amount owed before the available item menu will display.
+When option "View Products for Sale" is selected, a list of every available item: the item IDs, names, prices, and quantities are displayed.
 
-9. If you try to purchase more of an item then there is avalibility for, it will alert you and then display the availible item menu after six seconds.
+Next, if "View Low Inventory" is selected, then it should list all items with an inventory count lower than five.
 
-10. Exit the program by pressing control + C.
+If "Add to Inventory" is selected, you will see a prompt that will let the manager "add more" of any item currently in the store.
 
-Note: There is a video tutorial at: https://drive.google.com/open?id=0B5WxQUw0pX3WbXNHTTJud0x4NkU
+And lastly, if "Add New Product" is selected, the user should be able to add a completely new product to the store.
+
+Below is a link to the sample output of the solution in screen shots.
+
+https://imgur.com/a/rtsq6
