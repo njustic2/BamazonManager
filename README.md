@@ -1,57 +1,23 @@
-# BamazonManager
+bamazonCustomer.js is a node application that uses mysql to take in a database to create a simple marketplace where a user can select an item, select how many to purchase and display an amount owed. It will also update the database to reflect the adjustments to the inventory as the user selects items and amounts. Note: after a transaction, the inventory menu re-loads after six seconds.
 
-Overview
+Instructions:
 
-This application creates an Amazon-like storefront with the MySQL gathered so far. The app takes in orders from customers and deplete stock from the store's inventory. 
+1. Navigate to the Bamazon directory using the terminal window.
+	
+2. Run the js file through node.js by typing "node bamazonCustomer.js" and pressing enter.
 
-The screen shot shows the output since it is a CLI application> did the first level, which is basic and thenm the next level which is intermediate. I also did the advance level. But my submission is based on the intermediate level.
+3. Note that the terminal displays the available items in a list along with each items catagory, unit price and availible stock.
 
-First level
+4. Select an item by typing in its unit id number and pressing enter.
 
-Customer View (Minimum Requirement)
+5. Enter how many of the item you would like to purchase and press enter.
 
-Create a MySQL Database called bamazon.
-Then create a Table inside of that database called products.
-The products table should have each of the following columns:
+7. The program will add up the total cost and display the amount owed. 
 
-item_id (unique id for each product)
-product_name (Name of product)
-department_name
-price (cost to customer)
-stock_quantity (how much of the product is available in stores)
+8. You will have six seconds to review the order and amount owed before the available item menu will display.
 
-Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
-Then create a Node application called bamazonCustomer.js. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
-The app should then prompt users with two messages.
+9. If you try to purchase more of an item then there is avalibility for, it will alert you and then display the availible item menu after six seconds.
 
-The first should ask them the ID of the product they would like to buy.
-The second message should ask how many units of the product they would like to buy.
+10. Exit the program by pressing control + C.
 
-Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
-
-If not, the app should log a phrase like Insufficient quantity!, and then prevent the order from going through.
-
-However, if your store does have enough of the product, you should fulfill the customer's order.
-
-This means updating the SQL database to reflect the remaining quantity.
-Once the update goes through, show the customer the total cost of their purchase.
-
-If this activity took you between 8-10 hours, then you've put enough time into this assignment. Feel free to stop here -- unless you want to take on the next challenge.
-
-Next Challenge #2: Manager View (Next Level)
-
-Create a new Node application called bamazonManager.js. Running this application will:
-
-List a set of menu options:
-View Products for Sale
-View Low Inventory
-Add to Inventory
-Add New Product
-If a manager selects View Products for Sale, the app should list every available item: the item IDs, names, prices, and quantities.
-If a manager selects View Low Inventory, then it should list all items with an inventory count lower than five.
-If a manager selects Add to Inventory, your app should display a prompt that will let the manager "add more" of any item currently in the store.
-If a manager selects Add New Product, it should allow the manager to add a completely new product to the store.
-
-If you finished Challenge #2 and put in all the hours you were willing to spend on this activity, then rest easy! Otherwise continue to the next and final challenge.
-
-https://imgur.com/a/rtsq6
+Note: There is a video tutorial at: https://drive.google.com/open?id=0B5WxQUw0pX3WbXNHTTJud0x4NkU
